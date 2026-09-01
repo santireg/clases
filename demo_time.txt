@@ -1,0 +1,1 @@
+abrir server python3 en 127.0.0.1 para que no puedan entrar

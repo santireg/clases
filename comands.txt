@@ -15,3 +15,7 @@ el server se cambia desde el codigo fuente
 127.0.0.1 localhost server local (solo en mi end system)
 192.168.1.50 server abierto a la lan
 
+python -m http.server 8000 -> abre server http en puerto 8000 escuchando en 0.0.0.0
+ese server muestra el filesystem con el directorio de la terminal como root
+
+python -m http.server 8000 --bind 0.0.0.0 bindeo a una ip especifica
