@@ -1,0 +1,17 @@
+sudo ufw disable
+sudo ufw enable
+sudo ufw status
+ifconfig
+netstat -tuna
+t = tcp
+u = udp
+n = numeric
+a = all
+(no importa el orden)
+python3 client_tcp.py <puerto> <ip>
+python3 client_tcp.py <8080> <192.168.1.50> interfaz wifi (seguro cambie por dhcp)
+python3 server_tcp.py
+el server se cambia desde el codigo fuente
+127.0.0.1 localhost server local (solo en mi end system)
+192.168.1.50 server abierto a la lan
+

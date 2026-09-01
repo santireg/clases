@@ -1,0 +1,66 @@
+los pipes son unidireccinales
+los sockets son bidireccionales
+
+
+un socket es un file descriptor que se identifica por (abajo)
+un socket necesita puerto, protocolo, ip
+
+que ip_local usa el socket? la de la interfaz
+como llego al 127.0.0.1? por una interfaz 
+mi end host tiene una ip por NIC (network interface card) -> es una pieza de hardware que entiende un protocolo de enlace
+
+el socket utiliza los servicios que provee IP
+hay sockets que no usen ip? -> 
+hay sockets bluetooth
+existen sockets unix para ipc
+bluetooth
+
+ifconfig -> interfacess
+ipconfig
+
+lo -> loopback es la interfaz que no "existe" a nivel de hardware. (no tiene NIC). red virtualizada en mi SO
+
+la interfaz existe aunque no estes conectado a internet. (DHCP no te da una ip)
+
+cuando bindeo permito que la info entre desde una red especifica a la que la interfaz esta conectada
+
+puedo estar conectado a dos redes distintas (una en cada intefaz)
+el socket queda conectado a la red de la interfaz
+
+socket != conexion
+En TCP, un mismo socket puede participar de misma
+direccion remota -> cuando esta escuchando
+
+cualquier interfaz -> 0.0.0.0
+
+netstat -tuna t = tcp u = udp n = numerico a = all
+ipv6 -> 128 bits
+ipv4 -> 32 bits
+
+puertos
+https -> 443
+http -> 80
+
+socket udp -> ip_local, puerto_local
+socket tcp -> ip_local, ip_dest, puerto_local, puerto_dest
+
+tcp
+three way handshake (esto lo hace el SO con el socket)
+SYN
+SYN ACK
+ACK
+
+quien abre los well known ports? -> el server
+sockets udp con direccion? algun proto que establece conexiones
+la lib de sockets permite: fijar el otro extremo aunque sea udp, que pasa si hago un sendto() a otro?
+
+el sistema operativo manda el paquete al socket y que pasa con ese paquete? 
+si el paquete no esta integro, no se demultiplexa se descarta
+si esta integro, el SO va a tener que meterlo en la cola del socket
+
+probar hacer udp, tcp con mismo puerto
+
+ufw -> desactivar el firewall para la demo
+
+watch netstat -tuna
+revisa el comando cada 2 segs
